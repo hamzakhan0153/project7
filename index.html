@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.Write a JavaScript program where the program takes a random Number between 1 to 10, 
+        the user is then prompted to input a guess number. If the user input matches with guess number, 
+        the program will display a message "Good Work" otherwise display a message "Not matched".</title>
+</head>
+
+<style>
+    button{
+        padding: 8px 8px;
+        font-size: 1.7rem;
+        border: none;
+        background-color: red;
+        cursor: pointer;
+        border-radius: 10px;
+       
+
+    }
+</style>
+<body>
+    <button onclick="guess()">Click Me To Guess A Number!</button>
+</body>
+<script>
+      function guess(){
+    var num = parseInt(Math.random() * 10 + 1);
+    var userGuess = prompt("Input A Guess Number Between 1 to 10");
+    if(isNaN(userGuess)) {
+      alert("Please, Write a number");
+    } else {
+        if(num == userGuess){
+            alert("Wow you guessed it :D");
+        } else {
+            alert("Not matched. Number was " + num);
+        }
+    }
+}
+</script>
+</html>
